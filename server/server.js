@@ -3,6 +3,8 @@ const express = require('express');
 const dotenv = require('dotenv');
 const cors = require('cors');
 
+const itemRoutes = require('./routes/itemRoutes');
+
 
 dotenv.config( { path: `${__dirname}/.env` } );
 
@@ -22,6 +24,8 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
+
+app.use('/api/items', itemRoutes);
 
 const port = process.env.PORT || 3000;
 

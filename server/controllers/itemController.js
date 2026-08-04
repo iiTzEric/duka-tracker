@@ -1,4 +1,4 @@
-const item = require('../models/item.js');
+const item = require('../models/Item.js');
 
 // creates a new item, saves it, returns it
 const createItem = async (req, res) => {
